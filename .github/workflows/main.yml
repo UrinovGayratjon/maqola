@@ -1,15 +1,15 @@
-#  name: Build & Deploy spring app
-#
-#  on:
-#    push:
-#      branches:
-#        - main
-#
-#  jobs:
-#    build-deploy:
-#      name: Build and deploy Spring boot
-#      runs-on: ubuntu-latest
-#      steps:
+name: Build & Deploy spring app
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    name: Build and deploy Spring boot
+    runs-on: ubuntu-latest
+    steps:
 #        - name: Checkout code
 #          uses: actions/checkout@v3
 #
@@ -27,18 +27,7 @@
 #            mvn clean
 #            mvn -B package --file pom.xml
 #
-name: Build & Deploy Spring app
 
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build-deploy:
-    name: Build and Deploy Spring boot for beginner
-    runs-on: ubuntu-latest
-    steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
